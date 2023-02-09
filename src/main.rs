@@ -43,4 +43,12 @@ fn main() {
             println!("Unknown")
         }
     }
+
+    let y = {
+        let x = 5_u8;
+        x + 1 // if ";" behind x + 1 => y = () https://doc.rust-lang.org/std/primitive.unit.html
+    };
+
+    println!("{y}");
+
 }
