@@ -28,4 +28,19 @@ fn main() {
 
     let result2: i32 = area_of(100, 15);
     println!("{result2}");
+
+    let num: i32 = if 8 > 10 { 100 } else { 200 };
+    println!("{num}");
+
+    let _args: Vec<String> = std::env::args().skip(1).collect();
+
+    for arg in _args {
+        if arg == "sum" {
+            println!("Sum")
+        } else if arg == "double" {
+            println!("Double")
+        } else {
+            println!("Unknown")
+        }
+    }
 }
